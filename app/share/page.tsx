@@ -36,7 +36,8 @@ export default function SharePage() {
   const generateShareMessage = (participant: any) => {
     if (!userProfile) return '';
     
-    return `Hi ${participant.name}! Your share from ${splitData.receipt.vendor || 'the restaurant'} is PKR ${participant.total_amount.toFixed(2)}.
+    const amount = (participant.total_amount ?? 0).toFixed(2);
+    return `Hi ${participant.name}! Your share from ${splitData.receipt.vendor || 'the restaurant'} is PKR ${amount}.
 Pay: ${userProfile.payment_info}
 Thanks!`;
   };
@@ -177,7 +178,7 @@ Thanks!`;
                   <div>
                     <p className="font-medium">{participant.name}</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      PKR {participant.total_amount.toFixed(2)}
+                      PKR {(participant.total_amount ?? 0).toFixed(2)}
                     </p>
                   </div>
                   <Button
