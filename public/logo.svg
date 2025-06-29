@@ -1,0 +1,13 @@
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+  <line
+    x1="12"
+    y1="2"
+    x2="12"
+    y2="22"
+    stroke="#00B3B8"
+    strokeWidth="2"
+    strokeDasharray="2 2"
+  />
+  <circle cx="6"  cy="12" r="3" fill="#FFC857" />
+  <circle cx="18" cy="12" r="3" fill="#00B3B8" />
+</svg>
